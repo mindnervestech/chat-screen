@@ -1,0 +1,56 @@
+mat-toolbar {
+    height: 80px;
+}
+mat-toolbar-row {
+    width: 84% !important;
+    max-width: 1366px;
+    margin: auto;
+}
+
+mat-toolbar-row > div {
+    margin-left: 3%;
+    width: 75vw;
+}
+
+#navLinks {
+    text-align: left;
+}
+
+.navLink{
+    width: 54px;
+    height: 22px;
+    font-size: 16px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #282c2f;
+    margin-left:8%;
+}
+.navLogo{
+    margin-right:2vh;
+}
+
+#logoutLink {
+    text-align: right;
+}
+.profilePicture{
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+}
+.helloLabel{
+    width: 72px;
+    height: 22px;
+    font-size: 17px;
+    padding-right:5px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #0093e8;
+}

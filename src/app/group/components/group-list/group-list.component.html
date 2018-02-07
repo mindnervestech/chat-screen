@@ -1,0 +1,23 @@
+<div align="center" style="background-color: #ebebeb;">
+<div class="container">
+    <div class="row">
+        <h2>{{userName}}'s Groups</h2>
+        <button mat-mini-fab id="newGroupButton" routerLink="/home/add-group" color="primary">+</button>
+    </div>
+      <div class="row" *ngFor="let group of allGroups">
+          <div class="col-md-5">
+              <img src="./../../assets/files/NBA_76ers_team_logo.png" height="200" alt="">
+            </div>
+            <div class="col-md-7 px-3" style="text-align: left">
+              <div class="card-block px-3">
+                <h4 class="card-title">{{group.season_ticket.team}} 2017-2018</h4>
+                <p class="card-text">{{group.season_ticket.sport}}</p>
+                <p class="card-text">{{group.tstamp_readable}}</p>
+                <a href="#" class="btn btn-primary">View Group Details</a>
+              </div>
+            </div>
+          </div>
+</div>
+</div>
+
+  

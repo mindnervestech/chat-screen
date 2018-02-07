@@ -1,0 +1,85 @@
+<user-nav></user-nav>
+<div class="container login-container">
+    <div id="loginPanel">
+        <div class="col-lg-6 col-lg-offset-3 text-center loginOptions">
+            <mat-card>
+                <img src="./../../assets/images/logo.png" alt="">
+                <h1 id="loginTitle">Sign Up</h1>
+                <mat-card-content>
+                  <mat-form-field style="width: 42.5%;">
+                    <input 
+                      type="text" 
+                      matInput 
+                      placeholder="First Name" 
+                      [(ngModel)]="user.firstName" 
+                      name="firstName" 
+                      [formControl]="firstName" 
+                      required>
+                    <mat-error *ngIf="firstName.invalid">{{getFirstNameErrorMessage()}}</mat-error>
+                  </mat-form-field>
+                  <mat-form-field style="width: 42.5%;">
+                    <input 
+                      type="text" 
+                      matInput 
+                      placeholder="Last Name" 
+                      [(ngModel)]="user.lastName" 
+                      name="lastName"
+                      [formControl]="lastName" 
+                      required>
+                    <mat-error *ngIf="lastName.invalid">{{getLastNameErrorMessage()}}</mat-error>
+                  </mat-form-field>
+                  <br>
+                  <mat-form-field>
+                    <input 
+                      type="email" 
+                      matInput 
+                      placeholder="Email" 
+                      [(ngModel)]="user.email"
+                      name="email"                    
+                      [formControl]="email" 
+                      required>
+                    <mat-error *ngIf="email.invalid">{{getEmailErrorMessage()}}</mat-error>
+                  </mat-form-field>
+                  <br>
+                  <mat-form-field>
+                    <input 
+                      type="password" 
+                      matInput 
+                      placeholder="Password" 
+                      [(ngModel)]="user.password" 
+                      name="password" 
+                      [formControl]="password" 
+                      required>
+                    <mat-error *ngIf="password.invalid">{{getPasswordErrorMessage()}}</mat-error>
+                  </mat-form-field> 
+        
+                  <div class="profileImageInput">
+                    <label class="btn btn-primary" for="my-file-selector">
+                      <input id="my-file-selector"[(ngModel)]="profImageInput.val" 
+                      type="file" style="display:none;" (change)="detectFiles($event)" required>
+                      <span *ngIf="!isFile">Select a profile picture </span>
+                      <span *ngIf="isFile">Thanks!</span>
+                    </label>
+                    <span *ngIf="showInputError">Please upload a profile image</span>
+
+                  </div>         
+                  <br>
+                  <mat-checkbox color="primary" [(ngModel)]="user.RememberMe">Remember Me</mat-checkbox>
+                  <br>
+                  <button color="primary" mat-raised-button (click)="signUpEmailPassword()">Sign Up</button>
+                  <br>
+                  <button color="primary" mat-raised-button (click)="signUpFacebook()">Sign in with Facebook</button>
+                  <br>
+                  <span style="font-family: Sans-Serif;">Already have an account? <a routerLink="/login">Login Here</a></span>
+                </mat-card-content>
+              </mat-card>
+        </div>
+    </div>
+</div>
+
+<div align="center">
+    <div class="example-container">
+      
+    </div>
+  </div> 
+          

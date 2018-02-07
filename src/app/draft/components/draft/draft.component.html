@@ -1,0 +1,45 @@
+<mat-toolbar class="draftStatusToolbar">
+  <div fxFlex="20" class="draftStatus">
+    <h2 class="roundLabel">{{draftState}}</h2>
+    <h2 *ngIf="drafting" class="timerLabel">Round timer: 0:{{countdown}}</h2>
+    <h2 *ngIf="drafting" class="timerLabel">Round # {{roundNum}}</h2>
+    <h2 *ngIf="queueing" class="timerLabel">Queue timer: 0:{{countdown}}</h2>
+
+  </div>
+  <div fxFlex="50" class="turnIconList">
+    <div class="singleTurnIcon" *ngFor="let pick of draftPicks">
+      <img class="turnAvatar" src="/assets/images/draft/user-icon.png"/>
+      <span class="turnName">{{pick.first_name}}</span>
+    </div>
+  </div>
+  <div fxFlex="30" class="turnIconList" style="margin-right:12vh">
+    <div class="singleTurnIcon" *ngIf="autopicked">
+      <h3>{{pickedTicket.name}} picked {{pickedTicket.team}} on {{pickedTicket.date}}</h3>
+    </div>
+  </div>
+</mat-toolbar>
+<div class="draft">
+  <mat-tab-group [(selectedIndex)]="selectedTabIndex" class="demo-tab-group">
+    <mat-tab class="draft-tab-label" [disabled]="!queueing">
+        <ng-template mat-tab-label>
+          <img class="draft-tab-icon"src="assets/images/draft/draft-cal-icon.png"/>
+          <span class="draft-tab-label"> Queue </span>
+      </ng-template>
+      <app-draft-list></app-draft-list>
+    </mat-tab>
+    <mat-tab class="draft-tab-label" [disabled]="!drafting">
+        <ng-template mat-tab-label>
+            <img class="draft-tab-icon"src="assets/images/draft/queue-icon.png"/>
+            <span class="draft-tab-label"> Draft </span>
+        </ng-template>
+      <app-draft-queue></app-draft-queue>
+    </mat-tab>
+    <mat-tab class="draft-tab-label" [disabled]="!drafting">
+        <ng-template mat-tab-label>
+            <img class="draft-tab-icon"src="assets/images/draft/trophy.png"/>
+            <span class="draft-tab-label"> Results </span>
+        </ng-template>
+      <app-draft-result></app-draft-result> 
+    </mat-tab>
+  </mat-tab-group>
+</div>

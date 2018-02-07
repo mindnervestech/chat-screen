@@ -1,0 +1,52 @@
+.mat-dialog-container {
+    display: flex !important;
+    flex-direction: column;
+}
+
+.mat-dialog-container > * {
+    display: flex;
+    flex-direction: column;
+}
+
+.mat-dialog-content {
+    max-height: inherit !important;
+}
+
+.mat-dialog-actions {
+    display: block !important;
+    flex-grow: inherit;
+    flex-shrink: inherit;
+    padding: 12px 0 0 !important;
+}
+.proceed-checkout-btn{
+    width:180px;
+    cursor: pointer;
+}
+.header{
+    display: inline-block;
+    text-transform: capitalize;
+}
+.icon{
+    display: inline-block;
+    width: 60px;
+}
+.header-text{
+    display: inline-block;
+    font-size: 30px;
+    font-weight: 400;
+}
+.subHeader{
+    color: #a7a7a7;
+    font-weight: 600;
+    font-size: 18px;
+
+}
+.dialogFooterText{
+    font-weight: 600;
+    font-size: 20px;
+
+}
+.dialogContent{
+    font-size: 16px;
+    line-height: 1.57;
+}

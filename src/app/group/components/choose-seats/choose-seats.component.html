@@ -1,0 +1,52 @@
+<mat-toolbar class="selected-team-toolbar">
+    <div fxFlex="30" class="selected-team-info">
+      <h2 class="selected-team-name">{{selectedTicketData.name}}</h2>
+      <h2 class="selected-team-league">{{selectedTicketData.league}}</h2>
+    </div>
+    <div fxFlex="70" class="home-game-count">
+    </div>
+    <div style="float:right; text-align:right;">
+        <h2>Home Games: <span class="homeGame-count">{{selectedTicketData.homeGameCount}}</span></h2>
+    </div>
+</mat-toolbar>
+<!-- End team data toolbar -->
+
+<div align="center">
+    <div fxFlex="10"></div>
+    <div fxFlex="50" class="selected-team-info">
+      <mat-card>
+          <img id="stadiumImage" mat-card-image src="../../../../assets/images/teams/stadium-example.png" alt="Photo of Sport Stadium">
+      </mat-card>
+      </div>
+      <div fxFlex="30" class="home-game-count">
+        <mat-card class="map-card">
+            <mat-card-content>
+                <mat-form-field>
+                    <mat-select [(value)]="selectedTicketData.section" placeholder="Section">
+                      <mat-option *ngFor="let section of sections" [value]="section.value" style="display:block;">
+                        <span style="float:left">{{ section.viewValue }}</span> <span style="float: right; font-weight:700">{{ section.viewPrice }}</span>
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field><br>
+                  <mat-form-field>
+                    <mat-select [(value)]="selectedTicketData.games" placeholder="Games">
+                      <mat-option *ngFor="let game of games" [value]="game.value">
+                        <span>{{ game.viewValue }}</span> <strong style="float: right; font-weight:700">{{ game.viewPrice }}</strong>
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field><br>
+                  <mat-form-field>
+                    <mat-select [(value)]="selectedTicketData.seats" placeholder="Seats">
+                      <mat-option *ngFor="let seat of seats" [value]="seat.value">
+                        <span>{{ seat.viewValue }}</span> <strong style="float: right; font-weight:700">{{ seat.viewPrice }}</strong>   
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+            </mat-card-content>
+        </mat-card>
+        <a (click)="openDraftDialog();">
+            <img class="proceed-checkout-btn" src="/assets/images/buttons/proceed-checkout.png"/>
+          </a>
+      </div>
+    <div fxFlex="10"></div>
+</div>

@@ -1,0 +1,31 @@
+<mat-horizontal-stepper >
+  <mat-step [stepControl]="firstFormGroup">
+    <!-- <form [formGroup]="firstFormGroup"> -->
+      <!-- <ng-template matStepLabel>Choose Sport and Team</ng-template> -->
+      <app-choose-season></app-choose-season>
+      <!-- <div>
+        <button mat-button matStepperNext>Next</button>
+      </div> -->
+    <!-- </form> -->
+  </mat-step>
+  <mat-step [stepControl]="secondFormGroup">
+    <form [formGroup]="secondFormGroup">
+      <!-- <ng-template matStepLabel>Choose Seats</ng-template> -->
+      <app-choose-seats></app-choose-seats>
+      <!-- <mat-form-field>
+        <input matInput placeholder="Address" formControlName="thirdCtrl" required>
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Confirm</button>
+      </div> -->
+    </form>
+  </mat-step>
+  <!-- <mat-step>
+    <ng-template matStepLabel>Done</ng-template>
+    You are now done.
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+    </div>
+  </mat-step> -->
+</mat-horizontal-stepper>

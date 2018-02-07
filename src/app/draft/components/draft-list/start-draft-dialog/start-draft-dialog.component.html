@@ -1,0 +1,21 @@
+<div class="header">
+        <img class="icon" src="/assets/images/icons/blue-ball-icon.png" />
+        <h1 class="header-text" mat-dialog-title>Prioritize your picks </h1>
+      </div>
+      
+      <div mat-dialog-content>
+        <h4 class="subHeader">The draft begins in 20 seconds.</h4>
+        <p class="dialogContent">
+          Use this time to queue up your desired games
+        </p>
+      </div>
+      
+      <div mat-dialog-actions>
+          <a (click)="confirm()">
+              <img class="proceed-checkout-btn"  src="/assets/images/buttons/enter-draft.png"/>
+            </a>
+      
+        <!-- <button mat-button (click)="confirmDraftStart()" routerLink="/draft-config" color="primary">
+          ENTER DRAFT
+        </button> -->
+      </div>

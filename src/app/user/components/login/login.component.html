@@ -1,0 +1,91 @@
+<user-nav></user-nav>
+<div class="container login-container">
+    <div id="loginPanel">
+        <div class="col-lg-6 col-lg-offset-3 text-center loginOptions">
+            <mat-card>
+                <img src="./../../assets/images/logo.png" alt="">
+                <h1 id="loginTitle">Login</h1>
+                <mat-card-content>
+                  <mat-form-field>
+                    <input 
+                      type="email" 
+                      matInput 
+                      placeholder="Email" 
+                      [(ngModel)]="user.email"
+                      name="email"                    
+                      [formControl]="email" 
+                      required>
+                    <mat-error *ngIf="email.invalid">{{getEmailErrorMessage()}}</mat-error>
+                  </mat-form-field>
+                  <br>
+                  <mat-form-field>
+                    <input 
+                      type="password" 
+                      matInput 
+                      placeholder="Password" 
+                      [(ngModel)]="user.password" 
+                      name="password" 
+                      [formControl]="password" 
+                      required>
+                    <mat-error *ngIf="password.invalid">{{getPasswordErrorMessage()}}</mat-error>
+                  </mat-form-field>
+                  <br>
+                  <mat-checkbox color="primary" [(ngModel)]="user.RememberMe">Remember Me</mat-checkbox>
+                  <br>
+                  <button color="primary" mat-raised-button (click)="signInEmail(user)">Sign in with Email</button>
+                  <br>
+                  <button color="primary" mat-raised-button (click)="signInFacebook()">Sign in with Facebook</button>
+                  <br>
+                  <button color="primary" mat-raised-button (click)="forgotPassword(user)">Forgot Password</button>
+                  <br>
+                  <span style="font-family: Sans-Serif;">Don't have an account? <a routerLink="/signup">Sign up Here</a></span>
+                </mat-card-content>
+              </mat-card>
+        </div>
+    </div>
+</div>
+
+<!-- <div align="center">
+  <div class="example-container">
+    <mat-card>
+      <img src="./../../assets/images/logo.png" alt="">
+      <h1 id="loginTitle">Login</h1>
+      <mat-card-content>
+        <mat-form-field>
+          <input 
+            type="email" 
+            matInput 
+            placeholder="Email" 
+            [(ngModel)]="user.email"
+            name="email"                    
+            [formControl]="email" 
+            required>
+          <mat-error *ngIf="email.invalid">{{getEmailErrorMessage()}}</mat-error>
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+          <input 
+            type="password" 
+            matInput 
+            placeholder="Password" 
+            [(ngModel)]="user.password" 
+            name="password" 
+            [formControl]="password" 
+            required>
+          <mat-error *ngIf="password.invalid">{{getPasswordErrorMessage()}}</mat-error>
+        </mat-form-field>
+        <br>
+        <mat-checkbox color="primary" [(ngModel)]="user.RememberMe">Remember Me</mat-checkbox>
+        <br>
+        <button color="primary" mat-raised-button (click)="signInEmail(user)">Sign in with Email</button>
+        <br>
+        <button color="primary" mat-raised-button>Sign in with Facebook</button>
+        <br>
+        <button color="primary" mat-raised-button (click)="forgotPassword(user)">Forgot Password</button>
+        <br>
+        <span style="font-family: Sans-Serif;">Don't have an account? <a routerLink="/signup">Sign up Here</a></span>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div> -->
+        

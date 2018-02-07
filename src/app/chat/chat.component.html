@@ -1,0 +1,218 @@
+<div fxLayout="row" fxLayoutAlign="left start" class="main-layout-chat">
+  <div fxFlex.gt-mat="100" fxFlex.gt-sm="100" fxFlex="100">
+    <!-- <mat-card class="mat-card-top"> -->
+      <mat-sidenav-container style="background: #fff;">
+       <mat-toolbar class="chat-toolbar">
+          <div fxLayout="row" fxFlex="100" fxLayoutAlign="center center">
+            <div fxFlex="30" class="inbox">
+                <span class="inbox-title">Inbox</span>
+            </div> 
+            <div fxFlex="70" class="title-user" fxLayoutAlign="center ">
+                <span class="title-user-right">Nicolas Savage</span>
+            </div>
+            <!-- <input type="text" class="input-search" placeholder="Search..."> -->
+          </div>
+       </mat-toolbar>
+        <hr>
+        <mat-card-content fxFlex="100">
+          <div fxFlex="30">
+              <mat-nav-list  class="nav-list-box">
+                  <mat-list-item (click)="switchfun('current')">
+                    <div class="left-box"  id="current">
+                        <img src="assets/images/face7.jpg">
+                      <div class="box-1"><span class="box1">Nicholas Savage</span><br/>
+                        <span class="box-1-bottom">Hey, Awesome! looking forward to that game</span>
+                      </div>
+                      <div class="right-box">16 minutes ago</div>
+                    </div>
+                  </mat-list-item>
+                  <div style="clear:both;"></div>
+                  <mat-list-item (click)="switchfun('current1')">  
+                    <div class="left-box" id="current1" >
+                      <img src="assets/images/face7.jpg">
+                      <div class="box-1"><span class="box1">Nicholas Savage</span><br/>
+                        <span class="box-1-bottom">Hey, Awesome! looking forward to that game</span>
+                      </div>
+                      <div class="right-box">16 minutes ago</div>
+                    </div>
+                  </mat-list-item>
+                  <mat-list-item  (click)="switchfun('current2')">  
+                    <div class="left-box" id="current2" >
+                      <img src="assets/images/face7.jpg">
+                      <div class="box-1"><span class="box1">Nicholas Savage</span><br/>
+                        <span class="box-1-bottom">Hey, Awesome! looking forward to that game</span>
+                      </div>
+                      <div class="right-box">16 minutes ago</div>
+                    </div>
+                  </mat-list-item>
+                    <mat-list-item (click)="switchfun('current3')"> 
+                      <div class="left-box" id="current3" >
+                        <img src="assets/images/face7.jpg">
+                        <div class="box-1"><span class="box1">Nicholas Savage</span><br/>
+                          <span class="box-1-bottom">Hey, Awesome! looking forward to that game</span>
+                        </div>
+                        <div class="right-box">16 minutes ago</div>
+                      </div>
+                    </mat-list-item>
+                      <mat-list-item >  
+                        <div class="left-box" id="current4" >
+                          
+                        </div>
+                      </mat-list-item> 
+                </mat-nav-list>
+          </div>
+          
+          <div fxFlex="70" class="full-content">
+            <!-- <div class="main-content" [hidden]="current">
+              <div class="content">
+                <div class="cont-img">
+                  <img src="assets/images/face7.jpg">
+                </div>
+                <div class="cont">
+                  <span class="a1">Atlanta,</span><span class="a2">Braves</span>
+                </div>
+              </div>
+              <div class="content">
+                <div class="cont-img">
+                  <img src="assets/images/face7.jpg">
+                </div>
+                <div class="cont">
+                  <span class="a1">New York,</span><span class="a2">Yankees</span>
+                </div>
+              </div>
+              <div class="content">
+                <div class="cont-img">
+                  <img src="assets/images/face7.jpg">
+                </div>
+                <div class="cont">
+                  <span class="a1">Milwaukee,</span><span class="a2">Brewers</span>
+                </div>
+              </div>
+              <div class="content">
+                <div class="cont-img">
+                  <img src="assets/images/face7.jpg">
+                </div>
+                <div class="cont">
+                  <span class="a1">Chicago,</span><span class="a2">Cubs</span>
+                </div>
+              </div>
+              <div class="content">
+                <div class="cont-img">
+                  <img src="assets/images/face7.jpg">
+                </div>
+                <div class="cont">
+                  <span class="a1">Boston,</span><span class="a2">Red Sox</span>
+                </div>
+              </div>
+              <div class="bottom-content-position" [hidden]="current">
+                <div class="bottom-content" [hidden]="current">   
+                    <mat-form-field>
+                        <textarea matInput placeholder="Send to... " matTextareaAutosize matAutosizeMinRows="2" matAutosizeMaxRows="3"></textarea>
+                    </mat-form-field>  
+                    <div class="bottom-reply" [hidden]="current">
+                        <button class="bottom-btn">Reply</button>
+                      </div>  
+                </div>  
+              </div>
+            </div> -->
+            <!-- <mat-card-content> -->
+              <div class="chat-conversation-user them">
+                  <div class="chat-conversation-user-them-pic">
+                      <img src="assets/images/face7.jpg">
+                  </div>
+                <div class="chat-conversation-message">
+                  <p>Hey.</p>
+                </div>
+              </div>
+              <!-- <div class="chat-conversation-user-them-pic">
+                  <img src="assets/images/face7.jpg">
+              </div> -->
+              <div class="chat-conversation-user them">
+                  <div class="chat-conversation-user-them-pic">
+                      <img src="assets/images/face7.jpg">
+                  </div>
+                <div class="chat-conversation-message">
+                  <p>How are the wife and kids, Taylor?</p>
+                </div>
+              </div>
+              <div class="chat-conversation-user me">
+                <div class="chat-conversation-message">
+                  <p>Pretty good, Samuel.</p>
+                </div>
+                <div class="chat-conversation-user-me-pic">
+                    <img src="assets/images/face7.jpg">
+                </div>
+              </div>
+              <div class="chat-conversation-user me">
+                <div class="chat-conversation-message">
+                  <p>What about your...?</p>
+                </div>
+                <div class="chat-conversation-user-me-pic">
+                    <img src="assets/images/face7.jpg">
+                </div>
+              </div>
+              <div class="chat-conversation-user them">
+                  <div class="chat-conversation-user-them-pic">
+                      <img src="assets/images/face7.jpg">
+                  </div>
+                <div class="chat-conversation-message">
+                  <p>Curabitur blandit tempus porttitor.</p>
+                </div>
+              </div>
+              <div class="chat-conversation-user me">
+                <div class="chat-conversation-message">
+                  <p>Goodnight!</p>
+                </div>
+                <div class="chat-conversation-user-me-pic">
+                    <img src="assets/images/face7.jpg">
+                </div>
+              </div>
+              <div class="chat-conversation-user them">
+                  <div class="chat-conversation-user-them-pic">
+                      <img src="assets/images/face7.jpg">
+                  </div>
+                <div class="chat-conversation-message">
+                  <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+                </div>
+              </div>
+              <div class="chat-conversation-user them">
+                <div class="chat-conversation-user-them-pic">
+                    <img src="assets/images/face7.jpg">
+                </div>
+              <div class="chat-conversation-message">
+                <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula,Duis mollis, est non commodo luctus, nisi erat porttitor ligula,Duis mollis, est non commodo luctus, nisi erat porttitor ligula,Duis mollis, est non commodo luctus, nisi erat porttitor ligula,Duis mollis, est non commodo luctus, nisi erat porttitor ligula,Duis mollis, est non commodo luctus, nisi erat porttitor ligula,Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+              </div>
+            </div>
+            <div class="chat-conversation-user me">
+              <div class="chat-conversation-message">
+                <p>Bye, bye!</p>
+              </div>
+              <div class="chat-conversation-user-me-pic">
+                  <img src="assets/images/face7.jpg">
+              </div>
+            </div>
+            <div class="chat-conversation-user them">
+              <div class="chat-conversation-user-them-pic">
+                  <img src="assets/images/face7.jpg">
+              </div>
+            <div class="chat-conversation-message">
+              <p>See you tomorrow!..</p>
+            </div>
+          </div>
+            <!-- </mat-card-content> -->
+            <div class="bottom-content-position" [hidden]="current">
+              <div class="bottom-content" [hidden]="current">   
+                  <mat-form-field>
+                      <textarea matInput placeholder="Send to... " matTextareaAutosize matAutosizeMinRows="2" matAutosizeMaxRows="3"></textarea>
+                  </mat-form-field>  
+                  <div class="bottom-reply" [hidden]="current">
+                      <button class="bottom-btn">Reply</button>
+                    </div>  
+              </div>  
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-sidenav-container>
+    <!-- </mat-card> -->
+  </div>
+</div>

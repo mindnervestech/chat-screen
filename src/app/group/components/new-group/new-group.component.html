@@ -1,0 +1,52 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- <div align="center">
+    <img id="Logo" src="./../../assets/images/logo_transparent.png" alt="">
+    <p id="GroupInstructions">
+      If you are joining an existing group you were<br>
+      invited to via text message, enter your group code<br>
+      below or choose to create a new group.
+    </p>
+    <mat-form-field>
+        <input 
+          type="text" 
+          matInput 
+          placeholder="Enter Group Code" 
+          [(ngModel)]="group_code"
+          name="group_code"                    
+          required>
+      </mat-form-field>
+      <br>
+      <button color="accent" mat-button>Join Group</button>
+      <br>
+      <button color="accent" routerLink="/group-config" mat-button>Create New Group</button>
+      <br>
+      <button color="accent" mat-button>Public Group</button>
+</div> -->
+
+<div class="newGroupContainer text-center">
+    <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3" style="margin-top:10vh">
+      <div class="row">
+        <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
+              <input #groupCode type="text" class="input-lg groupCodeInput" placeholder="Enter group code"/> 
+              <!-- <img class="sign-in-fb-btn" src="/assets/images/login/ss-logo-trans.png"/ style="margin-bottom:5vh"> -->
+              <span class="instructions">
+                <br>
+                If you are joining a existing group you were
+                invited to via text  message enter your group code below 
+                or choose to create a new group
+              </span>
+              <div class="line" style="margin-bottom:5vh; margin-top:4vh" ></div>
+              <a (click)="joinGroup(groupCode.value)">
+                <img class="sign-in-fb-btn" src="/assets/images/buttons/join-btn.png"/>
+              </a>
+              <a (click)="createGroup()" routerLink="home/group-config">
+                <img class="sign-in-fb-btn" src="/assets/images/buttons/create-btn.png"/>
+              </a>
+              <a (click)="joinPublicGroup()">
+                <img class="sign-in-fb-btn" src="/assets/images/buttons/public-btn.png"/>
+              </a>
+        </div>
+        </div>
+    </div>
+</div>

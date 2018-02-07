@@ -1,0 +1,30 @@
+<div class="header">
+  <img class="icon" src="/assets/images/icons/blue-ball-icon.png" />
+  <h1 class="header-text" mat-dialog-title>GET READY TO DRAFT!</h1>
+</div>
+
+<div mat-dialog-content>
+  <h4 class="subHeader">Your Season Share Ticket Group is ready.</h4>
+  <p class="dialogContent">
+    Welcome to your Season Share ticket draft. Your ticket group is 
+    ready to make their selections for the upcoming season.
+    <br>
+    <br>
+    Choose your games wisely. If you can't make a game after the draft,
+    don't worry. Please use our group chat feature to message users to
+    swap tickets.
+    <br>
+    <br>
+    <span class="dialogFooterText">Good Luck in the Draft!</span>
+  </p>
+</div>
+
+<div mat-dialog-actions>
+    <a (click)="confirmDraftStart()">
+        <img class="proceed-checkout-btn" routerLink="/draft-config" src="/assets/images/buttons/enter-draft.png"/>
+      </a>
+
+  <!-- <button mat-button (click)="confirmDraftStart()" routerLink="/draft-config" color="primary">
+    ENTER DRAFT
+  </button> -->
+</div>

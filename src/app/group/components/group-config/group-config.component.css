@@ -1,0 +1,7 @@
+mat-horizontal-stepper {
+    width: 100%;
+}
+
+::ng-deep .mat-horizontal-stepper-header-container{
+    display: none !important;
+}

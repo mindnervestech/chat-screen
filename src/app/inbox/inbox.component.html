@@ -1,0 +1,94 @@
+    
+      <div class="container" style="margin-top:140px">
+          <div class="row">
+              <mat-card fxLayoutAlign="center" class="mat-card-top">
+                  <mat-sidenav-container>
+                    <mat-sidenav style="width:300px" #chatnav [mode]="isOver() ? 'over' : 'side'" [opened]="!isOver()">
+                      <mat-toolbar>
+                        <div fxLayout="row" fxFlex="100" fxLayoutAlign="center center">
+                          <span>INBOX</span>
+                        </div>
+                      </mat-toolbar>
+                      <mat-nav-list>
+                        <mat-list-item (click)="onSelect(message)" *ngFor="let thread of allThreads">
+                          <img mat-list-avatar src="{{selectedMessage.photo}}" class="mr-1" alt="">
+                          <p mat-line> {{thread.thread_with_first_name}} {{thread.thread_with_last_name}}</p>
+                          <p mat-line> {{thread.most_recent_msg }}</p> 
+                          <p mat-line> 15 min ago</p> 
+                        </mat-list-item>
+                      </mat-nav-list> 
+                    </mat-sidenav> 
+                    <mat-toolbar class="chat-toolbar">
+                      <div fxLayout="row" fxFlex="100" fxLayoutAlign="center center">
+                        <!-- <a class="toolbar-avatar mr-1">
+                          <img src="{{selectedMessage.photo}}">
+                        </a> -->
+                      <mat-nav-list>
+                          <mat-list-item>
+                              <img mat-list-avatar src="{{selectedMessage.photo}}" class="mr-1" alt="">
+                            </mat-list-item>
+                       </mat-nav-list> 
+                        <div fxFlex>
+                          <h5 class="ma-0">{{selectedMessage.from}}</h5>
+                        </div>
+                         <mat-menu #them="matMenu" x-position="before">
+                          <button mat-menu-item>Contact info</button>
+                          <button mat-menu-item>Mute</button>
+                          <button mat-menu-item>Delete chat</button>
+                        </mat-menu> 
+                      </div>
+                    </mat-toolbar>
+                    <hr>
+                    <mat-card-content>
+                      <div class="chat-conversation-user them" fxLayout="row">
+                        <div><img class="sender" src="{{selectedMessage.photo}}"></div>
+                        <div class="chat-conversation-message">
+                          <p>Hey.<span class="chat-date">{{ 1427207139000 | date: 'fullDate' }}</span></p>
+                        </div>
+                      </div>
+                      <div class="chat-conversation-user them">
+                        <div><img class="sender" src="{{selectedMessage.photo}}"></div>
+                        <div class="chat-conversation-message">
+                          <p>How are the wife and kids, Taylor?<span class="chat-date">{{ 1427412725000 | date: 'fullDate' }}</span></p>
+                        </div>
+                      </div>
+                      <div class="chat-conversation-user me">
+                         <div class="reciver-div"><img class="reciver" src="{{selectedMessage.photo}}"></div>
+                         <div class="chat-conversation-message">
+                          <p>Pretty good, Samuel.<span class="chat-date">{{ 1427546580000 | date: 'fullDate' }}</span></p>
+                        </div>
+                      </div>
+                      <div class="chat-conversation-user them">
+                        <div><img class="sender" src="{{selectedMessage.photo}}"></div>
+                        <div class="chat-conversation-message">
+                          <p>Curabitur blandit tempus porttitor.<span class="chat-date">{{ 1428275520000 | date: 'fullDate' }}</span></p>
+                        </div>
+                      </div>
+                      <div class="chat-conversation-user me">
+                        <div class="reciver-div"><img class="reciver" src="{{selectedMessage.photo}}"></div>
+                        <div class="chat-conversation-message">
+                          <p>Goodnight!<span class="chat-date">{{ 1428830580000 | date: 'fullDate' }}</span></p>
+                        </div>
+                      </div>
+                      <div class="chat-conversation-user them">
+                        <div><img class="sender" src="{{selectedMessage.photo}}"></div>
+                        <div class="chat-conversation-message">
+                          <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.<span class="chat-date">{{ 1429363920000 | date: 'fullDate' }}</span></p>
+                        </div>
+                      </div>
+                    </mat-card-content> 
+                    <hr>
+                    <mat-card-actions fxLayout="row" layout-align="center center">
+                        <div >
+                            <mat-form-field class="">
+                                <input matInput placeholder="Favorite food" value="Sushi">
+                              </mat-form-field>
+                            <button mat-fab>
+                              <mat-icon>send</mat-icon>
+                            </button>
+                          </div>
+                     </mat-card-actions>
+                  </mat-sidenav-container>
+                </mat-card>
+          </div>
+      </div>

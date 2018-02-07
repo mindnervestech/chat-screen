@@ -1,0 +1,40 @@
+<mat-toolbar color="accent" >
+  <mat-toolbar-row>
+    <img src="/assets/images/nav/nav-logo.png" class="navLogo" />
+    <span>{{pageName}}</span>
+    <div id="navLinks">
+        <button style="padding: 0 30px" mat-button routerLink="/orders">
+          <img src="/assets/images/nav/ticket.svg"/>
+          <span class="navLink">Tickets</span>
+        </button>
+      <button style="padding: 0 30px" mat-button routerLink="/home">
+        <img src="/assets/images/nav/group.svg"/>
+        <span class="navLink">Groups</span>
+      </button>
+      <button style="padding: 0 30px" mat-button routerLink="/inbox">
+        <img src="/assets/images/nav/chat.svg"/>
+        <span class="navLink">Messages</span>
+      </button>
+
+      <button style="padding: 0 30px" mat-button routerLink="/chat">
+        <!-- <img src="/assets/images/nav/chat.svg"/> -->
+        <span class="navLink">Inbox</span>
+      </button>
+      
+    </div>
+      <!-- <div id="logoutLink" *ngIf="user.isLoggedIn">
+        <button mat-button (click)="logout()" routerLink="/login" label="Logout">
+          <span>Logout</span>
+        </button>
+      </div> -->
+      <div id="logoutLink" >
+        <!-- <span class="helloLabel">
+           {{user.firstName}} {{user.lastName}}
+        </span> -->
+        <img class="profilePicture" src="/assets/images/login/user_logo_default.png"/>
+        <button class="btn btn-warning" (click)="logout()">Log out</button>
+      </div>
+    
+  </mat-toolbar-row>
+</mat-toolbar>
+<router-outlet></router-outlet>

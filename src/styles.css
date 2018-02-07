@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+/* @import "~@angular/material/prebuilt-themes/indigo-pink.css"; */
+
+main { 
+    background-image: url("./assets/images/background.jpg");
+    background-size: 100% 100%;
+    height: auto;
+    min-height: 100vh;
+    padding-bottom: 8px;
+ }
+
+ .starter-template {
+    width: 100%;
+    max-width: 1366px;
+    margin: auto;
+ }

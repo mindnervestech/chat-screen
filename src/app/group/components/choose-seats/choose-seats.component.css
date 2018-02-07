@@ -1,0 +1,75 @@
+mat-list {
+    width: 100%;
+}
+#chooseSeatsText {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 2em;
+    justify-content: center;
+}
+#stadiumImage {
+    max-width: 84%;
+}
+mat-form-field {
+    width: 80%;
+}
+.seat-list-item {
+    height: auto;
+    margin-top: 8px !important;
+}
+
+#GroupList div {
+    display: block!important;
+}
+.seat-list-button {
+    width: 100%;
+    height: 0px;
+}
+.seat-picture {
+    width: 20%;
+}
+.seat-picture img {
+    width: 80px;
+    padding: 10px;
+    margin-top: -16px;
+}
+.seat-details {
+    width: 80%;
+    margin-left: 20%;
+    margin-top: -100px;
+    text-align: left;
+    font-weight: bolder;
+    color: white;
+}
+.home-game-count{
+    float:right;
+}
+.selected-team-toolbar{
+    background-color: #282c2f;
+    color:white;
+    height: 80px;
+    margin-bottom: 6vh;
+    padding-right: 14vh;
+    padding-left: 14vh;
+}
+.selected-team-name{
+    font-size: 16px;
+}
+.selected-team-league{
+    font-size: 14px;
+}
+::ng-deep .mat-option-text {
+    display: block !important;
+}
+::ng-deep .mat-horizontal-content-container{
+    padding: 0 !important;
+}
+.proceed-checkout-btn{
+    width: 100%;
+    cursor: pointer;
+}
+.map-card{
+    margin-bottom: 2vh; 
+    height:80%;
+    padding-top:3vh;
+}

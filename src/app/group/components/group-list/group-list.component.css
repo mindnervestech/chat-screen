@@ -1,0 +1,83 @@
+  .group-list-container{
+    background-image: url('/assets/images/background.jpg');
+
+  }
+  .example-container {
+    width: 100%;    
+  }
+  
+  .example-container > * {
+    width: 100%;
+    min-width: 150px;
+    max-width: 90%;
+  }
+
+  mat-card {
+    width: 100% !important;
+    max-width: 1366px;
+    margin: auto;
+    margin-top: 40px;
+  }
+  mat-list-item {
+    height:350px !important;
+  }
+
+  mat-toolbar span {
+    margin: 8%;
+  }
+  #newGroupButton {
+    margin-left: 32%;
+    height: 50px;
+    width: 50px;
+  }
+  #GroupList {
+    width: 100%;
+    display: inline-block;
+  }
+  .group-list-item {
+    padding: 30px;
+    height:300px;
+  }
+  .group-list-button {
+    flex: 100%;
+    display: inline-block;
+    flex-direction: row;
+  }
+
+  /* .group-list-button > div {
+    flex: 33%;
+    display: inline-block;
+  } */
+  .group-picture {
+    width: 20%;
+  }
+  .group-picture > img {
+    width: 80px;
+  }
+  .group-details {
+    width: 50%;
+    margin-top: -100px;
+    margin-left: 25%;
+  }
+
+  .group-details span {
+    font-size: 16px;
+  }
+
+  @media (min-width: 600px) {
+    #newGroupButton {
+      margin-left: 48%;
+    }
+  }
+
+  @media (min-width: 920px) {
+    #newGroupButton {
+      margin-left: 56%;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    #newGroupButton {
+      margin-left: 64%;
+    }
+  }

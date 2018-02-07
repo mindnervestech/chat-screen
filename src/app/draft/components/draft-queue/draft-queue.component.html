@@ -1,0 +1,33 @@
+<div id="outer-container" align="center">
+    <div class="example-container">
+      <mat-card id="list-container">
+        <mat-toolbar id="table-titles" color="accent">
+          <div class="column-title">76ers vs</div>
+          <div class="column-title">Date</div>
+          <div class="column-title">Queue Game</div>
+        </mat-toolbar>
+        <mat-list id="gameList">
+          <mat-list-item  draggable="true" (dragenter)="dragenter($event)" (dragstart)="dragstart($event)" ripple class="game-list-item" *ngFor="let game of gamePool">
+            <div class="flex-container">
+              <div class="game-picture">
+                <img src="/assets/files/NBA_76ers_logo.png" alt="">
+              </div>
+              <div class="game-details">
+                <!-- <span mat-line>{{group.season_ticket.sport}}</span> -->
+                <span>{{game.team_city}} {{game.team_name}}</span><br>
+                <span>{{game.game_tstamp}}</span>
+              </div>
+              <div class="game-list-button">
+                <button mat-raised-button color="primary" *ngIf=(!game.isQueued) (click)="toggleGame(game)">
+                  DRAFT
+                </button>
+                <button mat-raised-button color="accent" *ngIf=(game.isQueued) (click)="toggleGame(game)">
+                   {{ game.priority }}            
+                </button>
+              </div>
+            </div> 
+          </mat-list-item>
+        </mat-list>
+      </mat-card>
+    </div>
+  </div>

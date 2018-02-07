@@ -1,0 +1,83 @@
+.wrapper {
+    margin-top: 180px;
+    display: flex;
+    flex-flow: row wrap;
+    background: white;
+    height: 80vh !important;
+}
+
+.draft-toolbar-title {
+    flex: 1;
+    /* justify-content: space-around; */
+}
+
+.draft-toolbar-users {
+    flex: 4;
+}
+mat-tab-group {
+    width: 100% !important;
+    display: flex;
+    margin-top: -80px;
+}
+/deep/ .mat-tab-label {
+    flex: 1;
+    width: 33% !important;
+}
+/* First header tool bar with draft status and turn icons */
+.draftStatusToolbar{
+    background-color:white;
+    border-top: solid 1px #dadada;
+    border-bottom: solid 1px #dadada;
+    height: 80px;
+}
+/* Div containing turn icons and labels  */
+.turnIconList{
+    padding-left:3vh;
+    padding-top: 8px;
+    display: inline-flex;
+}
+/* Round label */
+.roundLabel{
+    font-size: 22px;
+    font-weight: bold;
+}
+/* Timer label */
+.timerLabel{
+    color: #26b28c;
+    font-weight: 600;
+    font-size: 18px;
+}
+/* Div with draft timer and round number */
+.draftStatus{
+    border-right: solid 1px #dadada;
+    padding-left: 8vh;
+}
+
+/* Div encapsulating icon and name label */
+.singleTurnIcon{
+    margin-left: 3vh;
+}
+/* Icon image */
+.turnAvatar{
+    display: block;
+    width: 40px;
+}
+/* Turn name label */
+.turnName{
+    font-size: 16px;
+    display: block;
+    text-align: center;
+}
+
+/* Draft tabs */
+
+.draft-tab-label{
+    font-size: 22px !important;
+    margin-left:2vh;
+}
+.draft-tab-icon{
+    width: 25px;
+}
+.draft{
+    margin-top:10vh;
+}
